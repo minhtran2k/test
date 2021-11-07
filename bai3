@@ -1,0 +1,28 @@
+// Viết một chương trình xóa các phần tử trùng của một mảng và in ra kết quả.
+
+function daXuatHien(array, index, x) {
+
+    for (let i = 0; i < index; i++) {
+
+        if (array[i] == x) {
+
+            return true;
+
+        }
+
+    }
+
+    return false;
+}
+
+let arr = prompt("nhap mang:");
+
+for (let index = 0; index < arr.length; index++) {
+
+    if (!daXuatHien(arr, index, arr[index])) {
+
+        console.log(arr[index]);
+
+    }
+
+}
