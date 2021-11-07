@@ -1,0 +1,71 @@
+//bai tap 5
+
+let day = Number(prompt("vui long nhap ngay "));
+
+let month = Number(prompt("vui long nhap months"));
+
+let year = Number(prompt("vui long nhap year"));
+
+let cacThang1 = [1, 3, 5, 7, 8, 10, 12];
+
+let cacThang2 = [4, 6, 9, 11];
+
+let a; //bien kiem tra
+
+if (day >= 1) {
+
+    if (day <= 28 && month == 2) {
+
+        a = true;
+
+        console.log("hop le");
+
+        if (day < 28) {
+
+            console.log("ngay tiep theo la:", day + 1);
+
+        } else {
+
+            console.log("sang thang r:D");
+
+        }
+
+    }
+
+    if (day <= 30) {
+
+        for (let index = 0; index < cacThang2.length; index++) {
+
+            if (month == cacThang2[index]) {
+
+                a = true;
+
+                console.log("hop le");
+
+            }
+
+        }
+
+    }
+
+    if (day == 31) {
+
+        for (let index = 0; index < cacThang1.length; index++) {
+
+            if (month == cacThang1[index]) {
+
+                a = true;
+
+                console.log("hop le");
+
+            }
+
+        }
+
+    }
+
+} else {
+
+    console.log("k hop le");
+
+}
