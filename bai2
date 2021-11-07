@@ -1,0 +1,19 @@
+//Viết 1 chương trình với đầu vào là 1 chuỗi ký tự và in ra chuỗi đó với các ký tự đầu của chữ mỗi chữ được viết hoa
+
+function inHoa(str) {
+
+    let chuoiTach = str.toLowerCase().split(" ");
+
+    for (let index = 0; index < chuoiTach.length; index++) {
+
+        chuoiTach[index] = chuoiTach[index].charAt(0).toUpperCase() + chuoiTach[index].substring(1);
+
+    }
+
+    return chuoiTach.join(" ");
+}
+
+//main
+let a = prompt("nhap chuoi");
+
+console.log(inHoa(a));
